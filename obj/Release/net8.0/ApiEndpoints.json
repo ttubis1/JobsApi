@@ -1,0 +1,214 @@
+[
+  {
+    "ContainingType": "JobsApi.Controllers.JobsController",
+    "Method": "GetAllJobs",
+    "RelativePath": "api/Jobs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[JobsApi.Models.Job, JobsApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JobsApi.Controllers.JobsController",
+    "Method": "GetJobsByDate",
+    "RelativePath": "api/Jobs/bydate/{user}/{date}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "date",
+        "Type": "System.DateTime",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[JobsApi.Models.Job, JobsApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JobsApi.Controllers.JobsController",
+    "Method": "AddJob",
+    "RelativePath": "api/Jobs/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "JobsApi.Models.Job",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "JobsApi.Models.Job",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JobsApi.Controllers.JobsController",
+    "Method": "AddJobs",
+    "RelativePath": "api/Jobs/CreateMul",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "System.Collections.Generic.List\u00601[[JobsApi.Models.Job, JobsApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JobsApi.Controllers.JobsController",
+    "Method": "DuplicateUserRows",
+    "RelativePath": "api/Jobs/duplicate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[JobsApi.Models.Job, JobsApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JobsApi.Controllers.JobsController",
+    "Method": "GetJobsByMachine",
+    "RelativePath": "api/Jobs/machine",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "machine",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[JobsApi.Models.Job, JobsApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JobsApi.Controllers.JobsController",
+    "Method": "GetJobsByDateRange",
+    "RelativePath": "api/Jobs/range",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[JobsApi.Models.Job, JobsApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "JobsApi.Controllers.JobsController",
+    "Method": "GetJobsByUser",
+    "RelativePath": "api/Jobs/user/{user}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[JobsApi.Models.Job, JobsApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

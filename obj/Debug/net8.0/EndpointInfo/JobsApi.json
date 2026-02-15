@@ -1,0 +1,467 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "JobsApi",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Jobs": {
+      "get": {
+        "tags": [
+          "Jobs"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Job"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Job"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Job"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Jobs/user/{user}": {
+      "get": {
+        "tags": [
+          "Jobs"
+        ],
+        "parameters": [
+          {
+            "name": "user",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Job"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Job"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Job"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Jobs/bydate/{user}/{date}": {
+      "get": {
+        "tags": [
+          "Jobs"
+        ],
+        "parameters": [
+          {
+            "name": "user",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "date",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Job"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Job"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Job"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Jobs/range": {
+      "get": {
+        "tags": [
+          "Jobs"
+        ],
+        "parameters": [
+          {
+            "name": "user",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Job"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Job"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Job"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Jobs/machine": {
+      "get": {
+        "tags": [
+          "Jobs"
+        ],
+        "parameters": [
+          {
+            "name": "user",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "machine",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Job"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Job"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Job"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Jobs/Create": {
+      "post": {
+        "tags": [
+          "Jobs"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Job"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Job"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Job"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Jobs/CreateMul": {
+      "post": {
+        "tags": [
+          "Jobs"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Jobs/duplicate": {
+      "post": {
+        "tags": [
+          "Jobs"
+        ],
+        "parameters": [
+          {
+            "name": "user",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Job"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Job"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Job"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Job": {
+        "type": "object",
+        "properties": {
+          "jobId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "jobName": {
+            "type": "string",
+            "nullable": true
+          },
+          "copies": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "printed": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "width": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "height": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "integratorUser": {
+            "type": "string",
+            "nullable": true
+          },
+          "machineName": {
+            "type": "string",
+            "nullable": true
+          },
+          "jobStatus": {
+            "$ref": "#/components/schemas/JobStatus"
+          },
+          "startTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "JobStatus": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      }
+    }
+  }
+}
